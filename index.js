@@ -19,9 +19,13 @@ var handlers = {
     },
     'calculate': function() {
         var request = require('request');
-        request('http://api.worldbank.org/countries/us/indicators/NY.GDP.MKTP.CD?date=2016:2016', function (error, response, body) {
-            console.log('body:', body);
-            //parser.parseString(body);
+        request({
+            url: 'http://api.worldbank.org/countries/us/indicators/NY.GDP.MKTP.CD?date=2016:2016',
+            encoding: 'utf-8',
+            callback: function (error, response, body) {
+                console.log('body:', body);
+                //parser.parseString(body);
+                }
         });
     }
 };
