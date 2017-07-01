@@ -1,0 +1,29 @@
+{
+    "session": {
+        "sessionId": "SessionId.9f41e0a2-f73b-47b7-b27a-b8389c6dbfa7",
+        "application": {
+            "applicationId": "amzn1.ask.skill.85a3c4b7-bc73-4f62-a097-09f559094c91"
+        },
+        "attributes": {},
+        "user": {
+            "userId": "amzn1.ask.account.AEQWVPH4YJDBEAY4DNDUBZF2HXQEMUTEGAQRJWVRM6X3H53TDFVOHOCLBDMY2NLX5TU3B2RBKEYHQWWU3RPH6LTA62KHFI6VUV2A4OEIUK7ORJCX45UUE4DVS3DCICMEBZKHWDSIIA77YN3WEDBW3PXDRJE4QMYWQHELFB5OVU2G5QWXNN6CZELB23FNFLNPGOLV6KZETUU765Y"
+        },
+        "new": true
+    },
+    "request": {
+        "type": "IntentRequest",
+        "requestId": "EdwRequestId.4b323244-7f2c-4c4c-861d-9f70eecf5fd3",
+        "locale": "en-US",
+        "timestamp": "2017-07-01T05:16:02Z",
+        "intent": {
+            "name": "GetCountryGDPIntent",
+            "slots": {
+                "country": {
+                    "name": "country",
+                    "value": "Brazil"
+                }
+            }
+        }
+    },
+    "version": "1.0"
+}
