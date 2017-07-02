@@ -1,0 +1,36 @@
+GetCountryGDPIntent {country} G. D. P.
+GetCountryGDPIntent {country} Gross Domestic Product
+GetCountryGDPIntent {country} G. D. P. {year}
+GetCountryGDPIntent {country} {year} G. D. P.
+GetCountryGDPIntent {country} G. D. P. {year}
+GetCountryGDPIntent {country} G. D. P. in {year}
+GetCountryGDPIntent {country} Gross Domestic Product {year}
+GetCountryGDPIntent {country} {year} Gross Domestic Product
+GetCountryGDPIntent {country} Gross Domestic Product in {year}
+
+GetCountryGDPIntent G. D. P. of {country}
+GetCountryGDPIntent Gross Domestic Product of {country}
+GetCountryGDPIntent G. D. P. of {country} in {year}
+GetCountryGDPIntent Gross Domestic Product of {country} in {year}
+
+GetCountryGDPIntent the G. D. P. of {country}
+GetCountryGDPIntent the Gross Domestic Product of {country}
+GetCountryGDPIntent the G. D. P. of {country} in {year}
+GetCountryGDPIntent the Gross Domestic Product of {country} in {year}
+
+GetCountryGDPIntent what is the G. D. P. of {country}
+GetCountryGDPIntent what's the G. D. P. of {country}
+GetCountryGDPIntent what is the Gross Domestic Product of {country}
+GetCountryGDPIntent what's the Gross Domestic Product of {country}
+GetCountryGDPIntent what was the G. D. P. of {country} in {year}
+GetCountryGDPIntent what was the Gross Domestic Product of {country} in {year}
+
+GetCountryGDPIntent what the G. D. P. of {country} is
+GetCountryGDPIntent what the Gross Domestic Product of {country} is
+GetCountryGDPIntent what the G. D. P. of {country} was in {year}
+GetCountryGDPIntent what the Gross Domestic Product of {country} was in {year}
+
+GetCountryGDPIntent what {country} G. D. P. is
+GetCountryGDPIntent what {country} Gross Domestic Product is
+GetCountryGDPIntent what {country} G. D. P. was in {year}
+GetCountryGDPIntent what {country} Gross Domestic Product was in {year}

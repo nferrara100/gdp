@@ -1,0 +1,20 @@
+{
+    "intents": [
+        {
+            "slots": [
+                {
+                    "name": "country",
+                    "type": "AMAZON.Country"
+                },
+                {
+                    "name": "year",
+                    "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                }
+            ],
+            "intent": "GetCountryGDPIntent"
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
+        }
+    ]
+}

@@ -10,7 +10,7 @@ exports.handler = function(event, context, callback) {
     alexa.execute();
 };
 var myAlexa;
-var helpMessage = "Ask me what the GDP is of any country in the world. You can also ask me the GDP of a country in a specific year. For instance what was the GDP of Brazil in 2013?";
+var helpMessage = "Ask me what the GDP is of any country in the world. You can also ask me the GDP of a country in a specific year. For instance, what was the GDP of Brazil in 2013?";
 var handlers = {
     'AMAZON.HelpIntent': function() {
         myAlexa.emit(':tell', helpMessage);
@@ -24,7 +24,7 @@ var handlers = {
     'calculate': function() {
         myAlexa = this;
         var country = myAlexa.event.request.intent.slots.country.value;
-        var countryShort = country.replace("the ", "")
+        var countryShort = country.replace("the ", "").replace("'s", "");
         var countryCode = countrynames.getCode(countryShort);
         if (!countryCode) {
             countryCode = countryShort;
