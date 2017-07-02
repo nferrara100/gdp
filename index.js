@@ -16,21 +16,21 @@ var handlers = {
         myAlexa.emit(':tell', helpMessage);
     },
     'LaunchRequest': function() {
-        this.emit('calculate');
+        myAlexa.emit(':tell', helpMessage);
     },
     'GetCountryGDPIntent': function() {
         this.emit('calculate')
     },
     'calculate': function() {
         myAlexa = this;
-        var country = myAlexa.event.request.intent.slots.country.value;
-        var countryShort = country.replace("the ", "").replace("'s", "");
+        var country = myAlexa.event.request.intent.slots.country.value.replace("'s", "");
+        var countryShort = country.replace("the ", "");
         var countryCode = countrynames.getCode(countryShort);
         if (!countryCode) {
-            countryCode = countryShort;
+            countryCode = countryShort.replace(/[^a-z]/i, '');
         }
         var dataYear;
-        if (myAlexa.event.request.intent.slots.year){
+        if (myAlexa.event.request.intent.slots.year.value){
             dataYear = myAlexa.event.request.intent.slots.year.value;
         }
         else {
@@ -42,7 +42,7 @@ var handlers = {
                 dataYear = date.getFullYear() - 1;
             }
         }
-        var url = 'http://api.worldbank.org/countries/' + countryCode + '/indicators/NY.GDP.MKTP.CD?date=' + dataYear + ':' + dataYear;
+        var url = 'http://api.worldbank.org/countries/' + countryCode.toLowerCase() + '/indicators/NY.GDP.MKTP.CD?date=' + dataYear + ':' + dataYear;
         request({
             method: 'GET',
             uri: url,
@@ -55,7 +55,7 @@ var handlers = {
             //console.log('the decoded data is: ' + body);
             parser.parseString(body, function(err, result) {
                 if (err || result['wb:error'] || !result['wb:data']) { //Not a good way to find out
-                    myAlexa.emit(':tell', "I couldn't find any data on " + country + " in " + dataYear + ". Does it go by any other names?");
+                    myAlexa.emit(':tell', "I couldn't find any data on " + country + " in " + dataYear + ". Did that country exist that year? It might be listed by a different name or I might not have data on it.");
                 } else {
                     var remoteValue = JSON.stringify(result['wb:data']['wb:data'][0]['wb:value'][0]);
                     remoteValue = remoteValue.substring(1, remoteValue.length - 1); //Removes quotes
